@@ -32,6 +32,11 @@ app.use(cors({
   methods: ["GET", "POST"]
 }));
 
+app.get("/", (req, res) => {
+  res.send("Hello from the server!");
+}
+);
+
 
 // Routes
 app.use("/api/apply", applyRoutes);
