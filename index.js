@@ -27,6 +27,12 @@ const connectDB = async () => {
   }
 };
 
+app.use(cors({
+  origin: "*", // or specify your frontend URL like "https://daviselab.vercel.app"
+  methods: ["GET", "POST"]
+}));
+
+
 // Routes
 app.use("/api/apply", applyRoutes);
 
